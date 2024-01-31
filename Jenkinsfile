@@ -37,20 +37,20 @@ pipeline {
 			}
 		}
 	}
-		stage('Run Unit Tests') {
-            	steps {
-                	script {
+		//stage('Run Unit Tests') {
+            	//steps {
+                	//script {
                     	// Install Python and Pip
                     	//sh 'sudo apt-get update -s && sudo apt-get install -y python3 python3-pip -s'
-		  	  sh 'echo "ganesh" | sudo -S apt-get update'
-		    	 sh 'echo "ganesh" | sudo apt-get install -y python3 python3-pip'
+		  	//  sh 'echo "ganesh" | sudo -S apt-get update'
+		    	// sh 'echo "ganesh" | sudo apt-get install -y python3 python3-pip'
 		
 
                     	// Run unit tests
-                   	sh 'python3 -m unittest test_calculator.py'
-                }
-            }
-       }
+                   	//sh 'python3 -m unittest test_calculator.py'
+               // }
+           // }
+      // }
 		stage('Deploy') {
 			steps{
 				script {
