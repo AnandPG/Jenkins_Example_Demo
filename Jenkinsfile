@@ -1,4 +1,4 @@
-def application = "pythonapp"
+def application = "pythonapp_new"
 def dockerhubaccountid = "anand1104"
 //def BUILD_NUMBER = 1.0
 pipeline {
@@ -41,10 +41,10 @@ pipeline {
             steps {
                 script {
                     // Install Python and Pip
-                    sh 'apt-get update && apt-get install -y python3 python3-pip'
+                    sh 'sudo apt-get update && sudo apt-get install -y python3 python3-pip'
 
                     // Run unit tests
-                    sh 'python3 -m unittest test_calculator.py'
+                    sh 'sudo python3 -m unittest test_calculator.py'
                 }
             }
         }
