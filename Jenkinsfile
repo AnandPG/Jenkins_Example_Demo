@@ -41,10 +41,10 @@ pipeline {
             steps {
                 script {
                     // Install Python and Pip
-                    sh 'sudo apt-get update && sudo apt-get install -y python3 python3-pip'
+                    //sh 'sudo apt-get update && sudo apt-get install -y python3 python3-pip'
 
                     // Run unit tests
-                    sh 'sudo python3 -m unittest test_calculator.py'
+                    sh 'python3 -m unittest test_calculator.py'
                 }
             }
         }
