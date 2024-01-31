@@ -41,7 +41,7 @@ pipeline {
             steps {
                 script {
                     // Install Python and Pip
-                    //sh 'sudo apt-get update && sudo apt-get install -y python3 python3-pip'
+                    sh 'sudo apt-get update -s && sudo apt-get install -y python3 python3-pip -s'
 
                     // Run unit tests
                     sh 'python3 -m unittest test_calculator.py'
